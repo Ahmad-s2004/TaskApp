@@ -18,7 +18,7 @@ connectDB();
 
 app.use(express.json())
 app.get('/', (req, res)=>{
-    res.json("Welcome")
+    res.json({ message: 'Hello, World!' })
 })
 app.use('/api', router);
 
