@@ -17,6 +17,9 @@ const connectDB = async () => {
 connectDB();
 
 app.use(express.json())
+app.get('/', (req, res)=>{
+    res.json("Welcome")
+})
 app.use('/api', router);
 
 const PORT = process.env.PORT || 5050;
